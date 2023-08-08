@@ -71,8 +71,8 @@
           </svg>
         </li>
         <li>
-          <a class="font-bold  font-primary" href="#ppt"
-            >Ice cream</a
+          <button class="font-bold  font-primary" id="dropdownIcecream" data-dropdown-toggle="dropdown"
+            >Ice cream</button
           >
         </li>
         <li class="text-gray-300">
@@ -92,8 +92,8 @@
           </svg>
         </li>
         <li>
-          <a class="font-bold  font-primary" href="#cv"
-            >Cake</a
+          <button class="font-bold  font-primary" id="dropdowncake" data-dropdown-toggle="dropdowndropdowncake"
+            >Cake</button
           >
         </li>
         <li class="text-gray-300">
@@ -113,9 +113,9 @@
           </svg>
         </li>
         <li>
-          <a class="font-bold  font-primary" href="#poster"
-            >Drink</a
-          >
+          <button class="font-bold  font-primary"  id="dropdowndrink" data-dropdown-toggle="dropdowndropdowndrink"
+          >Drink</button
+        >
         </li>
         <li class="text-gray-300">
           <svg
@@ -134,10 +134,10 @@
           </svg>
         </li>
         <li>
-          <a class="font-bold  font-primary" href="#poster"
-            >Event and catering</a
-          >
-        </li>
+          <button class="font-bold font-primary" id="dropdownContactButton" data-dropdown-toggle="dropdowndropdownContactButton">Event and Catering</button>
+
+      </li>
+      
       </ul>
     
     </nav>
@@ -275,7 +275,87 @@
       </nav>
     </div>
     <!-- akhir nav -->
+    <div id="dropdown" class="z-10 hidden bg-slate-900 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 animate-slide-rotate-ver-l-bck-masuk" aria-labelledby="dropdownIcecream">
+          <a href="#" class="block px-4 py-2 text-md capitalize text-white font-primary font-bold hover:bg-blue-500 hover:text-orange-600">
+           Ice cream
+          </a>
+          <a href="#" class="block px-4 py-2 text-md capitalize text-white font-primary font-bold hover:bg-blue-500 hover:text-orange-600">
+            Ice cream bunddles
+          </a>
+          <a href="#" class="block px-4 py-2 text-md capitalize text-white font-primary font-bold hover:bg-blue-500 hover:text-orange-600">
+            Ice cream sandwich
+          </a>
+      </ul>
+  </div>
+    
+    <div id="dropdowndropdowncake" class="z-10 hidden bg-slate-900 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 animate-slide-rotate-ver-l-bck-masuk" aria-labelledby="dropdownIcecream">
+          <a href="#" class="block px-4 py-2 text-md capitalize text-white font-primary font-bold hover:bg-blue-500 hover:text-orange-600">
+        cake
+          </a>
+          <a href="#" class="block px-4 py-2 text-md capitalize text-white font-primary font-bold hover:bg-blue-500 hover:text-orange-600">
+         cake bunddles
+          </a>
+          <a href="#" class="block px-4 py-2 text-md capitalize text-white font-primary font-bold hover:bg-blue-500 hover:text-orange-600">
+         cake sandwich
+          </a>
+      </ul>
+  </div>
+    <div id="dropdowndropdowndrink" class="z-10 hidden bg-slate-900 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 animate-slide-rotate-ver-l-bck-masuk" aria-labelledby="dropdownIcecream">
+          <a href="#" class="block px-4 py-2 text-md capitalize text-white font-primary font-bold hover:bg-blue-500 hover:text-orange-600">
+        drink
+          </a>
+          <a href="#" class="block px-4 py-2 text-md capitalize text-white font-primary font-bold hover:bg-blue-500 hover:text-orange-600">
+         drink bunddles
+          </a>
+          <a href="#" class="block px-4 py-2 text-md capitalize text-white font-primary font-bold hover:bg-blue-500 hover:text-orange-600">
+         drink sandwich
+          </a>
+      </ul>
+  </div>
+    
+    <div id="dropdowndropdownContactButton" class="z-10 hidden bg-slate-900 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 animate-slide-rotate-ver-l-bck-masuk" aria-labelledby="dropdownIcecream">
+          <a href="#" class="block px-4 py-2 text-md capitalize text-white font-primary font-bold hover:bg-blue-500 hover:text-orange-600">
+         contact Whatsapp
+          </a>
+          <a href="#" class="block px-4 py-2 text-md capitalize text-white font-primary font-bold hover:bg-blue-500 hover:text-orange-600">
+        Dm instagram
+          </a>
+      </ul>
+  </div>
+    
+<!-- akhir navbar-->
+
+
+
+<section class="bg-white  mx-auto jumbotron lg:grid lg:grid-cols-2">
+  <div class="px-4 container  bg-primary  border-black border-4 w-full py-24 lg:py-56 lg:grid lg:grid-cols-2 lg:gap-8">
+    <!-- Kolom teks di sebelah kiri -->
+    <div class="col-span-2 xl:ps-12 ">
+      <p class="text-black font-primary text-xl text-center font-bold mb-4 capitalize">NEW SCOOPING
+      </p>
+      <p class="text-black font-primary text-4xl  text-center font-extrabold mb-2 mt-5 leading-10">CHOCOLATE <br>
+        CARAMEL <br>
+        CHEESECAKE <br></p>
+        <p class="text-black font-primary text-xl text-center font-normal mb-4 capitalize">Chocolate cream cheese ice cream. Swirls of caramel. Chunks of housemade graham cracker crust. It’s as if everything good in the world moved into a pint-sized condo.
+        </p>
+      <div class="mx-auto flex justify-center">
+      <button type="button" class="css-button-shadow-border-sliding--green font-primary hover:font-extrabold ">Lihat Promo</button>
+    </div>
+      </div>
+     
+    </div>
+     <!-- Kolom gambar di sebelah kanan -->
+     <div class="col-span-1">
+      <img src="/images/productJumbotron.jpg" alt="Gambar Jumbotron" class=" mx-auto w-3/4 xl:object-contain md:object-contain h-3/4 object-contain rounded-md">
+    </div>
+</section>
+
 
     <script src="/js/app.js"></script>
+    <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
   </body>
 </html>
