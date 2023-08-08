@@ -1321,6 +1321,22 @@ input:checked + .toggle-bg {
   animation: slide-rotate-ver-l-bck-masuk 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955)   reverse both;
 }
 
+@keyframes slide-rotate-ver-l-bck {
+  0% {
+    transform: translateX(0) translateZ(0) rotateY(0);
+    transform-origin: center left;
+  }
+
+  to {
+    transform: translateX(-150px) translateZ(-230px) rotateY(90deg);
+    transform-origin: center left;
+  }
+}
+
+.animate-slide-rotate-ver-l-bck {
+  animation: slide-rotate-ver-l-bck 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955)    both;
+}
+
 .cursor-default {
   cursor: default;
 }

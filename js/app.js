@@ -70,3 +70,14 @@ document.querySelectorAll(".toggleDropdownNavbar").forEach((toggle) => {
     toggleDropdown(dropdown);
   });
 });
+
+const Hjumbotron = new Typed("#Hjumbotron", {
+  strings: ["NEW SCOOPING", "New Style", "Join trend"],
+  typeSpeed: 100,
+  backSpeed: 50,
+  loop: true,
+  loopCount: Infinity,
+  showCursor: false,
+  cursorChar: "|",
+  autoInsertCss: true,
+});
