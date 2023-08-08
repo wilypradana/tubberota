@@ -1,3 +1,4 @@
+// Konfigurasi TailwindCSS
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js}"],
@@ -17,8 +18,8 @@ module.exports = {
       animation: {
         "scale-up-hor-left":
           "scale-up-hor-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
-        "slide-rotate-ver-right":
-          "slide-rotate-ver-right 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955)   both",
+        "slide-rotate-ver-r-fwd":
+          "slide-rotate-ver-r-fwd 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both",
       },
       keyframes: {
         "scale-up-hor-left": {
@@ -31,12 +32,14 @@ module.exports = {
             "transform-origin": "0% 0%",
           },
         },
-        "slide-rotate-ver-right": {
+        "slide-rotate-ver-r-fwd": {
           "0%": {
-            transform: "translateX(0) rotateY(0)",
+            transform: "translateX(0) translateZ(0) rotateY(0)",
+            "transform-origin": "center left",
           },
           to: {
-            transform: "translateX(150px) rotateY(-90deg)",
+            transform: "translateX(150px) translateZ(130px) rotateY(-90deg)",
+            "transform-origin": "center left",
           },
         },
       },
