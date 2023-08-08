@@ -39,22 +39,34 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-const dropdownToggle = document.querySelector(".show");
-const dropdownMenu = document.querySelector(".dropdown");
+function toggleDropdown(dropdown) {
+  dropdown.classList.toggle("hidden");
 
-// Add event listener
-dropdownToggle.addEventListener("click", () => {
-  dropdownMenu.classList.toggle("hidden");
-
-  if (!dropdownMenu.classList.contains("hidden")) {
-    dropdownMenu.classList.toggle("animate-scale-up-hor-left");
+  if (!dropdown.classList.contains("hidden")) {
+    dropdown.classList.toggle("animate-slide-rotate-ver-l-bck-masuk");
   } else {
-    dropdownMenu.classList.toggle("animate-slide-rotate-ver-r-fwd");
-    dropdownMenu.classList.toggle("hidden");
+    dropdown.classList.toggle("animate-slide-rotate-ver-l-bck-masuk");
+    dropdown.classList.toggle("animate-slide-rotate-ver-l-bck");
+    dropdown.classList.toggle("hidden");
     setTimeout(() => {
-      dropdownMenu.classList.add("hidden");
-      dropdownMenu.classList.toggle("animate-slide-rotate-ver-r-fwd");
-      dropdownMenu.classList.toggle("animate-scale-up-hor-left");
+      dropdown.classList.add("hidden");
+      dropdown.classList.toggle("animate-slide-rotate-ver-l-bck");
+      dropdown.classList.remove("animate-slide-rotate-ver-l-bck-masuk");
     }, 500);
   }
+}
+
+const allDropdowns = document.querySelectorAll(".dropdown");
+document.querySelectorAll(".toggleDropdownNavbar").forEach((toggle) => {
+  const dropdown = toggle.nextElementSibling;
+  toggle.addEventListener("click", () => {
+    allDropdowns.forEach((otherDropdown) => {
+      if (otherDropdown !== dropdown) {
+        otherDropdown.classList.add("hidden");
+        otherDropdown.classList.remove("animate-slide-rotate-ver-l-bck-masuk");
+        otherDropdown.classList.remove("animate-slide-rotate-ver-l-bck");
+      }
+    });
+    toggleDropdown(dropdown);
+  });
 });
